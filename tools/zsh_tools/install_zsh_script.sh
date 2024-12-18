@@ -1,14 +1,14 @@
 #!/bin/bash
 
 # Check if the script is run as root
-if [[ $EUID -ne 0 ]]; then
-   echo "This script must be run as root" 
-   exit 1
+if [[ $EUID -eq 0 ]]; then
+    echo "This script should not be run as root. Please run it as a normal user."
+    exit 1
 fi
 
 # Update and install Zsh
 echo "Updating package list and installing Zsh..."
-apt update && apt install -y zsh || { echo "Failed to install Zsh"; exit 1; }
+sudo apt update && sudo apt install -y zsh || { echo "Failed to install Zsh"; exit 1; }
 
 # Verify installation
 if ! command -v zsh >/dev/null 2>&1; then
