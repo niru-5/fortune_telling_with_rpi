@@ -6,3 +6,4 @@ data/
 *.jpeg
 py_env/
 mmpose/
+picamera2/

@@ -6,6 +6,10 @@ import time
 from picamera2 import Picamera2, Preview
 
 
+
+
+
+
 params = {
     "image_width": 640,
     "image_height": 480,

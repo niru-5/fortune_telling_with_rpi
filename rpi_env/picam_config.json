@@ -1,0 +1,6 @@
+{
+    "image_width": 600,
+    "image_height": 600,
+    "image_folder": "/home/rpi3b/Documents/rpi_env/images",
+    "time_to_capture": 10
+}
