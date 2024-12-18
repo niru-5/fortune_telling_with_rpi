@@ -6,4 +6,3 @@ data/
 *.jpeg
 py_env/
 mmpose/
-data/
