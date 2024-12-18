@@ -1,9 +1,10 @@
 # image capture by rpi camera
 
 
-import cv2
-import os
 import time
+
+from picamera2 import Picamera2, Preview
+
 
 params = {
     "image_width": 640,
@@ -22,8 +23,7 @@ def capture_images(params: dict):
     camera.set(cv2.CAP_PROP_FRAME_HEIGHT, params["image_height"])
 
     # create image folder if not exists
-    if not os.path.exists(params["image_folder"]):
-        os.makedirs(params["image_folder"])
+    os.makedirs(params["image_folder"], exist_ok=True)
     
     # capture images
     for i in range(params["time_to_capture"]):
@@ -40,7 +40,6 @@ def main():
     capture_images(params)
 
 if __name__ == "__main__":
-    # capture_image()
     main()
 
 
