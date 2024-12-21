@@ -6,4 +6,8 @@ data/
 *.jpeg
 py_env/
 mmpose/
+<<<<<<< HEAD
 picamera2/
+=======
+data/
+>>>>>>> main
