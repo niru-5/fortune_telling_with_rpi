@@ -1,1 +1,9 @@
 data/
+*.pyc
+*.png
+*.jpg
+*.bmp
+*.jpeg
+py_env/
+mmpose/
+data/
