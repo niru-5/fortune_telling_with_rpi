@@ -7,3 +7,4 @@ data/
 py_env/
 mmpose/
 picamera2/
+mmdeploy/
