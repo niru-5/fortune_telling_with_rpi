@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Check if the script is run as root
-if [[ $EUID -eq 0 ]]; then
-    echo "This script should not be run as root. Please run it as a normal user."
-    exit 1
-fi
+# if [[ $EUID -eq 0 ]]; then
+#     echo "This script should not be run as root. Please run it as a normal user."
+#     exit 1
+# fi
 
 # Update and install Zsh
 echo "Updating package list and installing Zsh..."
