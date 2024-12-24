@@ -8,7 +8,7 @@
 
 # Update and install Zsh
 echo "Updating package list and installing Zsh..."
-sudo apt update && sudo apt install -y zsh || { echo "Failed to install Zsh"; exit 1; }
+apt update && apt install -y zsh || { echo "Failed to install Zsh"; exit 1; }
 
 # Verify installation
 if ! command -v zsh >/dev/null 2>&1; then

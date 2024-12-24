@@ -67,6 +67,6 @@ docker build -t mm_docker_env:v1 .
 ```
 run command
 ```
-docker run --gpus=all -d --mount type=bind,source=/hdd/side_projects/,target=/hdd/side_projects/ --restart unless-stopped --name mm_deploy_container mm_docker_env:v1 sleep infinity
+docker run --gpus=all -d --mount type=bind,source=/hdd/side_projects/,target=/hdd/side_projects/ --restart unless-stopped --name mm_pose_container mm_docker_env:v1 sleep infinity
 ```
 

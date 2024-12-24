@@ -50,6 +50,11 @@ RUN apt install -y python3.10-venv
 
 SHELL ["/bin/bash", "-c"]
 
+
+# configuration that works. 
+# mmcv 2.0.0rc4 mmpose v1.0.0 mmdetection v3.1.0
+# TODO: Need to install mmsegmentation
+
 # create a virtual environment
 RUN python3 -m venv mm_env && \
     source mm_env/bin/activate && \
@@ -57,8 +62,8 @@ RUN python3 -m venv mm_env && \
     pip3 install openmim && \
     mim install mmengine && \
     pip3 install wheel && \
-    mim install "mmcv==2.2.0" && \
-    git clone --branch v3.1.0 https://github.com/open-mmlab/mmdetection.git && \
+    mim install "mmcv>=2.2.0" && \  
+    git clone --branch v3.3.0 https://github.com/open-mmlab/mmdetection.git && \
     cd mmdetection && \
     pip3 install -e . && cd .. && \
     git clone --branch v1.0.0 https://github.com/open-mmlab/mmpose.git && \
