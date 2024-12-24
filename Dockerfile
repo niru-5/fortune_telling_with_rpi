@@ -22,7 +22,20 @@ RUN apt-get install -y \
     p7zip-full \
     p7zip-rar \
     rar \
-    unrar
+    unrar \ 
+    net-tools \
+    netcat \
+    nmap \
+    iputils-ping \
+    dnsutils \
+    traceroute \
+    curl \
+    wget \
+    rsync \
+    ssh \
+    telnet \
+    ncftp \
+    nano
 
 RUN apt-get install -y \
     python3 \
