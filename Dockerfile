@@ -62,8 +62,9 @@ RUN python3 -m venv mm_env && \
     pip3 install openmim && \
     mim install mmengine && \
     pip3 install wheel && \
-    mim install "mmcv>=2.2.0" && \  
+    mim install "mmcv==2.2.0" && \  
     git clone --branch v3.3.0 https://github.com/open-mmlab/mmdetection.git && \
+    sed -i 's/mmcv_version < digit_version/mmcv_version <= digit_version/g' mmdetection/mmdet/__init__.py && \
     cd mmdetection && \
     pip3 install -e . && cd .. && \
     git clone --branch v1.0.0 https://github.com/open-mmlab/mmpose.git && \
